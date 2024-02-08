@@ -1,7 +1,7 @@
 ---
-import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import "@fontsource-variable/montserrat";
+import 'animate.css';
 
 interface Props {
   title: string;
@@ -19,16 +19,18 @@ const { description, title } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <title>{title}</title>
   </head>
-  <body>
-    <div
-      class="absolute inset-0 -z-10 h-full w-full bg-gray-200  bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
-    </div>
+  <body class="absolute inset-0 -z-10 h-full w-full bg-gray-200  bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]">
+    
     <Header />
     <slot />
-    <Footer />
   </body>
+  <!-- <Footer /> -->
 </html>
 
 <style is:global>
@@ -41,16 +43,7 @@ const { description, title } = Astro.props;
     scroll-behavior: smooth;
   }
 
-  body {
-    background-color: rgb(229,231,235);
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    html {
-      scroll-behavior: auto;
-    }
-  }
+  
+  
 </style>
+

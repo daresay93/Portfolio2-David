@@ -7,27 +7,21 @@ import SocialPill from "../components/SocialPill.astro";
 import Experience from "../components/Experience.astro";
 import FormacionAcademica from "../components/FormacionAcademica.astro";
 import OtrosDatos from "../components/OtrosDatos.astro";
-
+import "animate.css";
 ---
 
 <Layout
   title="Portfolio de David - Desarrollador y Programador Web principiante"
   description="Desarrollador Web principiante que ha participado en proyecto emprego Appventurers">
   <main class="px-4">
-   
     <section class="w-full lg:w-[740px] mx-auto py-40">
-      <h1 class="text-whit text-5xl font-bold flex flex-row gap-x-4 pb-10 ">
-         David Ares Sayáns 
-          <!-- <a
-          href="https://www.linkedin.com/david-ares-sayans"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center">
-          <Badge>Disponible para trabajar</Badge>
-        </a> -->
+      <h1
+        class="text-whit text-5xl font-bold flex flex-row gap-x-4 pb-10 animate__animated animate__fadeInDown">
+        David Ares Sayáns
       </h1>
       <h2 class="text-2xl text-wrap">
-        Desarrollador Web principiante 💻👨‍💻 <br /> Santiago de Compostela, España  📌 📍.
+        Desarrollador Web principiante 💻👨‍💻 <br /> Santiago de Compostela, España
+        📌 📍.
         <br />
         <span class="text-red-500"
           >Programa de emprego de Galicia Appventurers</span
@@ -53,22 +47,15 @@ import OtrosDatos from "../components/OtrosDatos.astro";
     </section>
 
     <section>
-      {
-        <Experience/>
-      }
+      {(<Experience />)}
     </section>
 
     <section>
-      {
-        <FormacionAcademica/>
-      }
+      {(<FormacionAcademica />)}
     </section>
 
     <section>
-      {
-        <OtrosDatos/>
-      }
+      {(<OtrosDatos />)}
     </section>
-
   </main>
 </Layout>
